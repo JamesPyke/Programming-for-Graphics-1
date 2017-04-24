@@ -4,4 +4,4 @@
 
 
 
-Link the accompanying blog - https://jamespyke.me/2017/04/18/programming-for-graphics-introduction/
+Link to the accompanying blog - https://jamespyke.me/2017/04/18/programming-for-graphics-introduction/
