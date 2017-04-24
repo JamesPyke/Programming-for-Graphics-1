@@ -32,9 +32,8 @@ void InitTextures(void)
 																// this will become
 																//redundant when we start to use shaders
 }
-void drawSquare() {
-
-
+void drawSquare() 
+{
 	glEnable(GL_TEXTURE_2D); // Switch on 2D texture mapping, this will overiride any glColor()
 	glBindTexture(GL_TEXTURE_2D, myImage);// Use the suplied 2D texture with any primitive shapes cfeated from this point onwards
 
@@ -129,7 +128,9 @@ void drawSquare() {
 	glEnd();
 	glDisable(GL_TEXTURE_2D);
 }
-void display() {
+
+void display() 
+{
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
@@ -148,7 +149,9 @@ void display() {
 	glutSwapBuffers();
 	glutPostRedisplay();
 }
-void initGL() {
+
+void initGL() 
+{
 	glClearColor(1.0f, 1.0f, 1.0f, 0.0f);
 	glClearDepth(1.0f);
 	glEnable(GL_DEPTH_TEST);
@@ -157,19 +160,20 @@ void initGL() {
 	glMatrixMode(GL_PROJECTION);
 	glOrtho(0.0, 1.0, 0.0, 1.0, -1.0, 1.0);
 }
-int main(int argc, char** argv) {
+
+int main(int argc, char** argv)
+{
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DOUBLE);
 	glutInitWindowSize(giXRes, giYRes);
 	glutInitWindowPosition(50, 50);
 	glutCreateWindow("Texture Rendering");
-	printf("main working");
 	/////////////////////////////////////////////
 	// Functions to setup the OpenILUT renderer
 	ilInit();
 	iluInit();
 	ilutRenderer(ILUT_OPENGL);
-	/////////////////////////////////////////////
+						 /////////////////////////////////////////////
 	glFrontFace(GL_CW); // When defining primitives, the FRONT side is assumed to be created from vertices which are listed in
 						//a clockwise direction
 	glCullFace(GL_BACK); // Specify if front or back faces should be culled. only takes effect if glEnable(GL_CULL_FACE) is executed

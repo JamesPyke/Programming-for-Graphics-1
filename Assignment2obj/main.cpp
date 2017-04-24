@@ -23,7 +23,7 @@ char ch = '1';
 FILE *fp;
 int read;
 GLfloat x, y, z;
-char const* fname = "cow.obj";
+char const* fname = "elephant.obj";
 
 //Variables for OBJ settings
 float zoom;
